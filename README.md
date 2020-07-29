@@ -9,8 +9,8 @@ gyms.ng is a nigerian online gyms/fitness centres booking platform,
 that enables users to search forgyms/fitness centress around nigeria, and basically the one close to them.
 Users can search for gyms/fitness centres by locations, top picked, name, and facilities they offfer.
 gyms centres offers various packages like
-- Workout -daily subscribtion, so user can only visit thegyms/fitness centres for a day that he paid for, once that they is off, subscribtion expires
-- Club Membership - this is on a monthly, quaterly basis, and prices may vary, depending on plan and what they offer
+- **Workout** -daily subscribtion, so user can only visit thegyms/fitness centres for a day that he paid for, once that they is off, subscribtion expires
+- **Club Membership** - this is on a monthly, quaterly basis, and prices may vary, depending on plan and what they offer
 
 
 ### problem Statement
