@@ -1,0 +1,98 @@
+.item {
+  margin: 1rem;
+  height: 51.8rem;
+  -webkit-box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+  margin-bottom: 3rem;
+  background-repeat: no-repeat;
+  background-size: 100% 45%;
+  background-position: top center;
+  min-width: 30rem;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 30rem;
+  animation: fadein 0.8s;
+}
+.item-image,
+.item-info {
+  height: 45%;
+  width: 100%;
+}
+.item:nth-child(odd) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("/images/product.jpg");
+}
+.item:nth-child(even) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("/images/lifterbg.jpg");
+}
+.item-image {
+  position: relative;
+}
+.item-info {
+  background: #ffff;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 4rem;
+}
+.item-rank {
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: #f03250;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  border-radius: 0 0.2rem;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+.item-info .item-name h3 {
+  font-size: 2rem;
+  color: #323232;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+.item-price {
+  font-size: 1.8rem;
+}
+.item-info .item-rating,
+.item-info .item-rating h5 {
+  color: goldenrod;
+}
+.item-info .item-rating,
+.item-flag {
+  display: flex;
+  justify-content: space-between;
+}
+.item-info .item-contact span {
+  color: #a8a8a8;
+  display: block;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.item-info .item-contact span i {
+  margin-right: 0.35rem;
+}
+.item-flag {
+  height: 10%;
+  padding: 1rem;
+  align-items: center;
+  border-top: 0.1rem solid rgb(225, 225, 225);
+  background-color: #fff;
+}
+.item-flag .logofooter img {
+  height: 3.5rem;
+}
+.item-flag .sitename h3 {
+  font-size: 1.5rem;
+}

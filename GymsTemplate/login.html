@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <div class="wrapper-div">
+        <div class='login'>
+            <div class="logo">
+                <img src="./img/logos/logodark.jpg">
+            </div>
+            <form>
+                <div class="form-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" class="input-control" placeholder="username"/>
+                   
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-key"></i>
+                    <input type="password" class="input-control" placeholder="password"/>
+                </div>
+                <div class="forgot-password">
+                    <span><a href="/forgot-password">forgot-password</a></span>
+                </div>
+                <button class="btn btn-login">Login</button>
+                <div class="horizontal-container">
+                    <span class="horizontal"></span>
+                    <span>or</span>
+                    <span class="horizontal"></span>
+                </div>
+                <p>login with</p>
+                <div class="social-login">
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-twitter-square"></i></span>
+                    <span><i class="fab fa-google"></i></span>
+                </div>
+            </form>
+        </div>
+   <div class="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1900 350" preserveAspectRatio="xMidYMid slice">
+           
+            <path id="Path_555" data-name="Path 555" d="M1794.3-320.35v577.6H-125V-298.015S43.386-395.9,397.951-361.85s551.6,192.232,895.309,200.016S1794.3-320.35,1794.3-320.35Z" transform="translate(125 369.042)" fill="#fff" />
+          </svg>
+        </div>  
+    </div>
+</body>
+<section className="loginpage">
+    <div className="login">
+      <section className="login-hero"></section>
+      <section className="login-form">
+        <div className="title-heading">
+          <h3>Be smart, Be wise</h3>
+          <h1>Welcome Back, </h1>
+        </div>
+        <form className="login-test">
+          <FormRow>
+            <TextField
+             
+            />
+            <TextField
+              name="password"
+              type="password"
+              {...this.state.formControls.password.inputs}
+              onChange={this.handleInputChange}
+              label="password"
+            />
+          </FormRow>
+          <button
+            style={{ width: "50%" }}
+            disabled={!this.state.isValidForm}
+            className="btn-primary btn"
+          >
+            Login
+          </button>
+          <Timer />
+        </form>
+      </section>
+    </div>
+  </section>
+</html>
