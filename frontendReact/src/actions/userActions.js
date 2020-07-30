@@ -1,5 +1,6 @@
 import axios from "axios";
 import { errorHandler } from "../utils";
+import {  USER_API_BASEURL } from "../constants"
 export const loginUser = errorHandler(
   "LOGIN",
   async (dispatch, username, password, history) => {
@@ -9,7 +10,7 @@ export const loginUser = errorHandler(
     dispatch({ type: "LOGIN_REQUEST" });
     const data = { email: username, password };
     const response = await axios.post(
-      "http://localhost:5000/api/v1/users/login",
+      `${USER_API_BASEURL}/login`,
       data,
       { withCredentials: true }
     );
@@ -27,7 +28,7 @@ export const loginUser = errorHandler(
 );
 
 export const signOut = errorHandler("LOGOUT", async (dispatch, history) => {
-  await axios.post("http://localhost:5000/api/v1/users/logout", null, {
+  await axios.post( `${USER_API_BASEURL}/logout`,null, {
     withCredentials: true,
   });
   localStorage.removeItem("id_token");

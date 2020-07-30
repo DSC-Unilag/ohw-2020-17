@@ -17,7 +17,7 @@ function App() {
         render={() => <Redirect to="/app/dashboard" />}
       />
 
-      <Route path="/gyms" component={Gyms} />
+      <Route path="/listing" component={Gyms} />
       <ProtectedRoute path="/app" component={DashboardLayout} />
       <PublicRoute path="/login" exact component={Login} />
       {/* <Route
