@@ -3,7 +3,7 @@ import { GymContext } from "../../contexts/gymContext";
 import FilterBar from "./component/FilterBar";
 import GymList from "../../component/GymList";
 import { Spinner } from "../../component/Spinner/";
-function Listing({match}) {
+function Listing() {
   const { Gyms, loading, error } = useContext(GymContext);
   const [filters, setFilter] = useState(Gyms);
   useEffect(() => {
@@ -36,7 +36,7 @@ function Listing({match}) {
         </div>
       );
     }
-    return <GymList gyms={filters} match={match} />;
+    return <GymList gyms={filters} />;
   };
   return (
     <>

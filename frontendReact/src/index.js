@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "tachyons"
-
 import "./assets/css/all.min.css";
 import "./assets/css/index.css";
 import "./assets/css/nice-select.css";
