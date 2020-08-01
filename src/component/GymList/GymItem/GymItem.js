@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import "./GymItem.css";
-export default function GymItem({ name, location, _id }) {
+export default function GymItem({ name, location, _id,match }) {
   return (
     <div className="item">
-      <Link to={`/gyms/${_id}`}>
+      <NavLink to={`${match.url}/${_id}`}>
         <div className="item-image">
           <div className="item-rank">Top picked</div>
         </div>
-      </Link>
+      </NavLink>
       <div className="item-info">
         <Link to={`/gyms/${_id}`}>
           <div className="item-name">
