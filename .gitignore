@@ -2,8 +2,8 @@
 
 # dependencies
 /node_modules
-/frontendReact/node_modules
-/frontendReact/.git
+/node_modules
+
 /.pnp
 .pnp.js
 
