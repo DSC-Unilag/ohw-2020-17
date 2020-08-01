@@ -1,18 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { HomeLayout } from "../../component/Layout";
 import Details from "./Details/Details";
 import Listings from "./Listing";
 import "./index.css";
-function Gyms(props) {
+function Gyms({match}) {
+  console.log(match.path)
   return (
-    <HomeLayout>
-      <Router>
-        <Switch>
-          <Route path="/gyms/:id" component={Details} />
-          <Listings />
-        </Switch>
-      </Router>
+    <HomeLayout> 
+       <Switch>
+           <Route path="/listing" exact component={Listings} />
+           <Route path={`${match.path}/:id`} component={Details} />
+        </Switch> 
     </HomeLayout>
   );
 }
