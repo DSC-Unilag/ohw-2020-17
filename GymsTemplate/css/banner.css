@@ -1,0 +1,148 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height:100vh;
+    background:linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url("../img/images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	text-align: center;
+	padding:10rem 0rem;
+}
+.banner .banner_info .banner_text h2{
+    color:#fff;
+}
+.banner .banner_info .banner_text p{
+	color:#fff;
+	padding:0.5rem;
+}
+.banner_form {
+	margin-bottom: 3rem;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 2rem;
+    border-radius: 0.5rem;
+	width:80%;
+}
+.banner_form form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.banner_form form input {
+	
+	font-size: 1.5rem;
+	color: #A8A8A8;
+	padding-left: 3rem;
+	height: 5.4rem;
+	border: none;
+}
+
+.banner_form form input::-webkit-input-placeholder {
+	color: #A8A8A8;
+}
+
+.banner_form form input::-moz-placeholder {
+	color: #A8A8A8;
+}
+
+.banner_form form input:-ms-input-placeholder {
+	color: #A8A8A8;
+}
+
+.banner_form form input::-ms-input-placeholder {
+	color: #A8A8A8;
+}
+
+.banner_form form input::placeholder {
+	color: #A8A8A8;
+}
+
+.banner_form form .select_control{
+	position: relative;
+	height: 5.4rem;
+}
+
+.banner_form form .select_control:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 1rem;
+	background: #eeeeee;
+	content: "";
+	z-index: 1;
+}
+.banner_form form .select_control .nice-select  {
+	width: 100%;
+    border: none;
+    border-radius: 0;
+    height: 5.4rem;
+    line-height: 5.6rem;
+}
+.banner_form form .select_control .nice-select span {
+	width: 100%;
+    border: none;
+    border-radius: 0;
+    height: 5.4rem;
+    line-height: 5.6rem;
+}
+.banner_form form .select_control .nice-select span {
+	font-size: 1.5rem;
+	color: #323232;
+}
+
+.banner_form form .select_control .nice-select .list {
+	border-radius: 0;
+	margin-top: 0;
+	width: 100%;
+}
+.bannerGymCategories{
+width:100%;
+}
+
+
+.banner .bannerGymCategories ul{
+	display: flex;
+	justify-content: center;
+}
+.banner .bannerGymCategories ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+	margin:0 0.5rem;
+	width:20%;
+}
+.banner .bannerGymCategories ul li a{
+    font-size: 1.5rem;
+	color: #ffffff;
+	padding: 1rem 2rem;
+	display: block;
+	border: 0.1rem solid #ebebeb;
+	margin-bottom: 1rem;
+ }
+
+ .banner .bannerGymCategories ul li a img{
+     height:4rem;
+}
+.banner_form form button {
+	width: 100%;
+	height: 5.4rem;
+	border: none;
+	font-size: 1.4rem;
+	font-weight: 700;
+	background: #f03250;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+.banner_form form > div, .banner_form form input{
+	max-width:100%;
+}
+.banner_form form > div{
+	flex:10%;
+}
+.banner_form form input{
+	flex:25%;
+}

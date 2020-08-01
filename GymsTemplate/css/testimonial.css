@@ -1,0 +1,36 @@
+.testimonial{
+    min-height:50vh;
+    padding:10rem 5rem;
+    background-color: #F3F4F7;
+}
+.testimonial .testimony{
+    margin:2rem 0rem;
+    display: flex;
+    padding:2rem 2rem 1rem 2rem;
+    background: #ffffff;;
+    border: .1rem solid rgba(0, 0, 0, 0.03);
+    border-radius: 1rem;
+    box-shadow: 0rem 3rem 3.3rem -4.1rem rgba(0, 0, 0, 0.24);
+}
+.testimonial .testimony .gravatar-side{
+  width:20rem;
+  height:8rem;
+  background: url("../img/bg1.jpg");
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.testimonial .testimony .comment-side{
+    padding:0 1rem;
+  }
+  .testimonial .testimony .comment-side p{
+    margin:.1rem;
+  }
+  .testimonial .testimony .comment-side p.user-details{
+    margin-top:1rem;
+  }
+  .testimonial .testimony .comment-side p.username{
+   font-weight: 900;
+  }
+  
