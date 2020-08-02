@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import {  HashRouter, Route, Redirect,Switch } from "react-router-dom";
 import Login from "./pages/Login/Login.js";
 import { DashboardLayout } from "./component/Layout";
 import Home from "./pages/Home";
@@ -9,24 +9,23 @@ import Gyms from "./pages/Gym";
 function App() {
   const { isAuthenticated } = useUserState();
   return (
-    <Router>
+   
+    <>
+    <HashRouter>
+    <Switch>
       <Route path="/" exact component={Home} />
       <Route
         exact
         path="/app"
         render={() => <Redirect to="/app/dashboard" />}
       />
-      <Route path="/listing" component={Gyms} />
-      <ProtectedRoute path="/app" component={DashboardLayout} />
-      <PublicRoute path="/login" exact component={Login} />
-      {/* <Route
-        render={() => (
-          <div className="title">
-            <h1>Oops 404 not found</h1>
-          </div>
-        )}
-      /> */}
-    </Router>
+       <ProtectedRoute path="/app" component={DashboardLayout} />
+       <PublicRoute path="/login" exact component={Login} />
+       <Route path="/listing" component={Gyms} />
+       </Switch>
+    </HashRouter>
+</>
+  
   );
   function ProtectedRoute({ component: Component, ...rest }) {
     return (
