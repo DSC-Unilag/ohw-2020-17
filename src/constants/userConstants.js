@@ -3,4 +3,4 @@ export const LOGOUT_REQUEST = "",
   LOGIN_REQUEST = "",
   LOGIN_ERROR = "",
   LOGOUT_ERROR = "",
-  USER_API_BASEURL = "https://fittech.me/api/v1/users";
+  USER_API_BASEURL = "https://api.fittech.me/v1/users";
