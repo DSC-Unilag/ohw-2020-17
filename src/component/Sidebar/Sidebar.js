@@ -76,12 +76,12 @@ function SideBar(location) {
   var { isMobileSidebarNotOpened, isPermanent } = useLayoutState();
   const isMobile = !isPermanent;
   // local
-
+  // isMobile is used to check if device is in mobile state or desktop state
+  // true for desktop and false for mobile
+  // if the device is not in desktop(it is in mobile) the sidebaris set to close
+  // toggle button should open the sidebar when it is needed
   return (
-    // isMobile is used to check if device is in mobile state or desktop state
-    //true for desktop and false for mobile
-    //if the device is not in desktop(it is in mobile) the sidebaris set to close
-    //toggle button should open the sidebar when it is needed
+      
     <div
       className={`${styles.sidebar} ${
         isMobile && isMobileSidebarNotOpened ? styles.close : styles.open

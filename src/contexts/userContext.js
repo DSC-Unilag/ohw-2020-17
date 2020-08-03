@@ -17,7 +17,7 @@ function UserProvider({ children }) {
   });
 
   useEffect(() => {
-    sessionWorker.onmessage = handleSessionWorker;
+     sessionWorker.onmessage = handleSessionWorker;
     //if the user is not logged in terminate the worker
     if (!state.isAuthenticated) {
       sessionWorker.terminate();
