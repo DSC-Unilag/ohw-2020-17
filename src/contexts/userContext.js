@@ -2,13 +2,11 @@ import React, { useEffect } from "react";
 import { userReducer } from "../reducers";
 import { loginUser, signOut } from "../actions";
 import {  createBrowserHistory } from "history"
-import {withRouter } from "react-router-dom"
 var UserStateContext = React.createContext();
 var UserDispatchContext = React.createContext();
 
 function UserProvider({ children }) {
-  const sessionWorker = new Worker("/webWorkers/sessionChecker.js");
-
+  
   var [state, dispatch] = React.useReducer(userReducer, {
     isAuthenticated: !!localStorage.getItem("id_token"),
     isLoading: false,
@@ -17,8 +15,7 @@ function UserProvider({ children }) {
   });
 
   
-  
-  return (
+   return (
     <UserStateContext.Provider value={state}>
       <UserDispatchContext.Provider value={dispatch}>
         {children}
