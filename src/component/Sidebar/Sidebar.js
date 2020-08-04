@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import styles from "./sidebar.module.css";
 import SidebarItem from "./SidebarItem/SidebarItem";
-import { useLayoutState } from "../../contexts/";
-function SideBar(location) {
+import { useLayoutState,toggleSidebar,useLayoutDispatch} from "../../contexts";
+
+function SideBar (location) {
+  var layoutDispatch = useLayoutDispatch();
   function onClick(e, item) {}
   const [navigations] = useState([
     { name: "home", label: "Home", link: "/app/dashboard", icon: "fa fa-home" },
@@ -87,7 +89,9 @@ function SideBar(location) {
         isMobile && isMobileSidebarNotOpened ? styles.close : styles.open
       }`}
     >
+       <span className={styles.closeSide}  onClick={() => toggleSidebar(layoutDispatch)}><i className="fa fa-times"></i></span>
       <div className={`${styles.title}`}>
+
         <img className="logo" src="/images/logos/logowhite.jpg" alt="logo" />
         <h2>Gyms.ng</h2>
       </div>
