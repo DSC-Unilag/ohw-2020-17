@@ -5,11 +5,13 @@ function FilterBar({ setFilter, gyms }) {
   const [location, setLocation] = useState("");
   const [categories] = useState([]);
   const handleEntries = () => {
+    
     setFilter((initialData) => {
       const result = gyms.filter((gym) => {
         if (
           gym.location.toLowerCase().includes(query.toLowerCase()) ||
-          gym.name.toLowerCase().includes(query.toLowerCase())
+          gym.name.toLowerCase().includes(query.toLowerCase()) 
+         
         ) {
           return true;
         }

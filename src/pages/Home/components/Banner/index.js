@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 function Banner() {
+     const location =["lagos","abuja", "shomolu"]
   return (
     <section className="banner">
       <div className="banner_info">
@@ -21,16 +22,15 @@ function Banner() {
       </div>
 
       <div className="banner_form">
-        <form className="form">
-          <input type="text" placeholder="search for gyms" />
+        <form className="form" action="/listing">
+          <input name="name" type="text" placeholder="search for gyms" />
+          <input name="location" type="text" placeholder="enter location" />
           <div className="select_control">
-            <select>
+            <select name="category">
               <option>select fitness option</option>
-            </select>
-          </div>
-          <div className="select_control">
-            <select>
-              <option>choose location</option>
+              <option value="yoga"> yoga</option>
+              <option value="gyms">Gym</option>
+              <option value="martial art">Martial art</option>
             </select>
           </div>
           <div className="btnControl">

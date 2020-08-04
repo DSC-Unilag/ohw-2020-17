@@ -4,7 +4,7 @@
   display: block;
   color: #ffff;
   text-align: center;
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  /* clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
   padding-top: 10rem;
   z-index: 200000;
   position: relative;
@@ -112,4 +112,17 @@ li i {
   text-align: center;
   border-top: 0.05rem solid #e6e6e6;
   margin: 0 1rem;
+}
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+    }
 }

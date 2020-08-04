@@ -25,6 +25,7 @@ function GridItem(props) {
     bcolor,
     auto,
     fitContent,
+    ...rest
   } = props;
   const colorSchema = {
     warning: "red",
@@ -41,7 +42,7 @@ function GridItem(props) {
   };
 
   return (
-    <div style={gridItemStyle} className={styles.grid_item}>
+    <div style={gridItemStyle} className={styles.grid_item} {...rest}>
       {children}
     </div>
   );

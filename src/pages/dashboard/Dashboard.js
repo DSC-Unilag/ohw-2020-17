@@ -59,16 +59,18 @@ export default function Dashboard() {
         </GridItem>
       </Grid>
       <Grid align="flex-start">
-        <GridItem shadow fitContent>
+        <GridItem shadow >
           <Card>
             <CardHead title="Bookings Overview" />
             <Chart />
           </Card>
         </GridItem>
-        <GridItem shadow auto fitContent>
-          <Card>
-            <CardHead />
+        <GridItem shadow >
+          <Card >
+          <CardHead title="Bookings Overview" />
+            <div class="chart" style={{width:"100%"}}>
             <Chart />
+            </div>
           </Card>
         </GridItem>
       </Grid>

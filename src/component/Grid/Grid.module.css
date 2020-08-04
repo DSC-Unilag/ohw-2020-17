@@ -2,8 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  max-width: 100%;
 }
 .grid_item {
+  max-width: 100%;
   margin: 1rem;
   flex-grow: 2;
   flex-shrink: 1;

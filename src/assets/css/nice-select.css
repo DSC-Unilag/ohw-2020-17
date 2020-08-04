@@ -142,6 +142,7 @@
   text-align: left;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  color:#000 !important;
 }
 .nice-select .option:hover,
 .nice-select .option.focus,

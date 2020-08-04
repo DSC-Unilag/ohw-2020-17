@@ -1,7 +1,7 @@
 .header {
   left: 0;
   top: 0;
-  right: 0;
+  width: 100%;
   z-index: 999;
   position: fixed;
   display: flex;
@@ -29,7 +29,7 @@
 .header_nav .nav ul li {
   margin-right: 5.5rem;
 }
-.header_nav .nav ul li a {
+.header_nav .nav ul li a{
   font-size: 1.5rem;
   color: #ffffff;
   font-weight: 600;
@@ -40,20 +40,23 @@
 .header_white .header_nav .nav ul li a {
   color: #000;
 }
-.header_nav .nav ul li a:after {
+.header_nav .nav ul li a:after,.nav-mobile ul li a:after {
   position: absolute;
   left: 0;
   bottom: 0;
   height: 0.2rem;
   width: 0%;
-  background: #f03250;
   content: "";
   opacity: 0;
   -webkit-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
 }
-.header_nav .nav ul li:hover > a:after {
+.header_nav .nav ul li a:after{
+  background: #f03250;
+}
+
+.header_nav .nav ul li:hover > a:after ,.nav-mobile ul li:hover > a:after {
   opacity: 1;
   width: 100%;
 }
@@ -79,13 +82,80 @@
   color: rgb(255, 136, 0);
   border-color: #000;
 }
+.menu-open{
+  font-size: 2rem;
+  border: 2px solid #fd0859;
+  padding:0.3rem 1.3rem;
+  margin:0 1rem;
+  border-radius: 0.5rem;
+  background-color: #fd0859;
+  box-shadow: 1px 1px 5px rgba(0,0, 0,0.3);
+  color: #fff;
+  display: none;
+  cursor: pointer;
+}
+.nav-mobile{
+  position: fixed;
+  top:0;
+  bottom:0;
+  background-color: #fd0859;
+  right:-999px;
+  width:50%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: all 650ms;
+  z-index:10000;
+  filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.5));
+  box-shadow:0px 10px 5px rgba(0,0,0,0.5);
+}
+.nav-mobile ul li{
+font-size: 3rem;
+margin:2.5rem 0;
+}
+.nav-mobile ul li a:after{
+  background-color: #fff;
+}
+.nav-mobile ul li a {
+display: block;
+position: relative;
+}
+.menu-close{
+ position: absolute;
+ top:10px;
+ left:20px;
+ font-size: 2.5rem;
+ cursor: pointer;
+}
+.logo-nav{
+  height:4.5rem;
+  width:4.5rem;
+  position: absolute;
+  top:10px;
+  right:10px;
+}
+.active{
+  right:0;
+}
+
 @media only screen and (max-width: 991px) {
   .nav {
     display: none;
   }
+  .menu-open{
+    display: inline-block;
+}
 }
 @media only screen and (max-width: 500px) {
   .rightMenu a.btnPrimary {
     display: none;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .nav-mobile{
+    right: -444444px;
   }
 }

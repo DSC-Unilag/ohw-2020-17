@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import Chart from "chart.js";
+import style from "./index.module.css"
 function MyChart() {
   let chartRef = React.createRef();
 
   useEffect(() => {
     const myChartRef = chartRef.getContext("2d");
+   
     new Chart(myChartRef, {
       type: "line",
       data: {
@@ -18,13 +20,14 @@ function MyChart() {
         ],
       },
       options: {
-        //Customize chart options
+        responsive:false,
+        maintainAspectRatio:false
       },
     });
   }, [chartRef]);
   return (
-    <div className="chart-area" style={{ width: 350 }}>
-      <canvas id="myChart" ref={(ref) => (chartRef = ref)} />
+    <div style={{width:"100%"}}>
+      <canvas style={{width:"100%"}} id={style.myChart} ref={(ref) => (chartRef = ref)} />
     </div>
   );
 }

@@ -33,30 +33,27 @@
 
 .banner_form form input {
   font-size: 1.5rem;
-  color: #a8a8a8;
+  color: #000;
   padding-left: 3rem;
   height: 5.4rem;
   border: none;
 }
 
 .banner_form form input::-webkit-input-placeholder {
-  color: #a8a8a8;
+  color: #000;
 }
 
 .banner_form form input::-moz-placeholder {
-  color: #a8a8a8;
-}
-
-.banner_form form input:-ms-input-placeholder {
-  color: #a8a8a8;
+  color: #000;
 }
 
 .banner_form form input::-ms-input-placeholder {
-  color: #a8a8a8;
+  color: #000 !important;
 }
 
+
 .banner_form form input::placeholder {
-  color: #a8a8a8;
+  color: #000 !important;
 }
 
 .banner_form form .select_control {

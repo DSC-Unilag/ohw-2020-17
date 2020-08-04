@@ -8,7 +8,7 @@ function HomeLayout(props) {
     <div>
       <MainHeader />
       <div>{children}</div>
-      {nofooter && <Footer />}
+      {!nofooter && <Footer />}
     </div>
   );
 }

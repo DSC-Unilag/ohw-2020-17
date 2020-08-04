@@ -1,12 +1,22 @@
-import React from "react";
+import React,{useEffect, useRef} from "react";
 import "./mainHeader.css";
 import { Link } from "react-router-dom";
 import { useUserState } from "../../../contexts";
 export function MainHeader() {
+ 
+  const openNav=()=>{
+    document.querySelector(".nav-mobile").classList.add('active')
+  }
+  const closeNav=()=>{
+    document.querySelector(".nav-mobile").classList.remove('active')
+  }
+
+ 
   const {
     user: { username },
   } = useUserState();
   return (
+    <>
     <header className="header header_white">
       <div className="header_logo">
         <Link to="/">
@@ -49,8 +59,26 @@ export function MainHeader() {
               <i className="fa fa-user"></i>
             </Link>
           )}
+           <span className="menu-open" onClick={openNav} ><i className="fa fa-bars"></i></span>
         </div>
       </div>
     </header>
+     <div className="nav-mobile-container">
+     <nav className="nav-mobile">
+         <div className="menu-close">
+             <span onClick={closeNav}><i className="fa fa-times"></i></span>
+         </div>
+         <div className="logo-nav">
+             <img src="/images/logos/logowhite.jpg" alt="logo" />
+         </div>
+         <ul>
+             <li><a href="/">Home</a></li>
+             <li><a href="/about">About</a></li>
+             <li><a href="/listing">Listings</a></li>
+             <li><a href="/contact">Contact</a></li>
+         </ul>
+     </nav>
+ </div>
+ </>
   );
 }
