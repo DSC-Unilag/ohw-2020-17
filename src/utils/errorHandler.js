@@ -6,11 +6,9 @@ const errorMessage = {
   isLoggedIn: "you are already logged in",
 };
 const logoutInstance = ({ response, request }, dispatch) => {
-  if ((response && response.status === 401) || request) {
+    console.log("hey")
     localStorage.removeItem("id_token");
     dispatch({ type: "LOG_OUT_SUCCESS" });
-  }
-
   return "";
 };
 const logInInstance = (response) => {

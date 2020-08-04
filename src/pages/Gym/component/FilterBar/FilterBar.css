@@ -1,13 +1,10 @@
 .filter_bar {
-  height: 100%;
   background-color: #ffff;
-  width: 25%;
+  flex: 0.8;
   flex-shrink: 0;
   border: 0.2rem solid #0000;
   padding: 6% 1rem 1rem 2rem;
   overflow-y: scroll;
-  position: fixed;
-  bottom: 0rem;
   z-index: 1;
 }
 .filter > div {
@@ -86,7 +83,6 @@ aside i {
 
 @media only screen and (max-width: 991px) {
   .filter_bar {
-    position: static;
     width: 100%;
     height: auto;
     overflow-y: none;

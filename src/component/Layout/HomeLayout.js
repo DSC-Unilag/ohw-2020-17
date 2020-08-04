@@ -5,9 +5,11 @@ import Footer from "../Footer/Footer";
 function HomeLayout(props) {
   const { children, nofooter } = props;
   return (
-    <div>
+    <div style={{display:"flex", flexDirection:"column"}}>
+    <div style={{flex:1}}>
       <MainHeader />
       <div>{children}</div>
+      </div>
       {!nofooter && <Footer />}
     </div>
   );
