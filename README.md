@@ -4,7 +4,7 @@
 **Find And Book Gymns/fitness centres In Nigeria,
 search through thousands of gymns and fitness centres in nigeria**
 
-## [link to Host Sited](https://fittech.me)
+## [link to Hosted webSite](https://fittech.me)
 
 ### Description
 gyms.ng is a nigerian online gyms/fitness centres booking platform,
