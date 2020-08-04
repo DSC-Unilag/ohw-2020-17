@@ -52,7 +52,7 @@ export function MainHeader() {
                 fontSize: "20px",
               }}
             >
-              {username}
+             <Link to="/app" >{username}</Link>
             </h3>
           ) : (
             <Link to="/login" className="login-btn">

@@ -30,7 +30,7 @@ function App() {
       <Route
         {...rest}
         render={(props) =>
-          true ? (
+          isAuthenticated ? (
             React.createElement(Component, props)
           ) : (
             <Redirect
