@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { userReducer } from "../reducers";
 import { loginUser, signOut } from "../actions";
-import {  createBrowserHistory } from "history"
+
 var UserStateContext = React.createContext();
 var UserDispatchContext = React.createContext();
 
