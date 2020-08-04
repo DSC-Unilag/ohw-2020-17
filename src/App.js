@@ -1,15 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect ,Switch} from "react-router-dom";
 import Login from "./pages/Login/Login.js";
 import { DashboardLayout } from "./component/Layout";
 import Home from "./pages/Home";
 import { useUserState } from "./contexts/";
-
 import Gyms from "./pages/Gym";
+import { NotFound } from "./component/Error";
 function App() {
   const { isAuthenticated } = useUserState();
   return (
     <Router>
+      <Switch>
       <Route path="/" exact component={Home} />
       <Route
         exact
@@ -19,13 +20,9 @@ function App() {
       <Route path="/listing" component={Gyms} />
       <ProtectedRoute path="/app" component={DashboardLayout} />
       <PublicRoute path="/login" exact component={Login} />
-      {/* <Route
-        render={() => (
-          <div className="title">
-            <h1>Oops 404 not found</h1>
-          </div>
-        )}
-      /> */}
+       <Route  component={NotFound}/> 
+  </Switch>
+
     </Router>
   );
   function ProtectedRoute({ component: Component, ...rest }) {
