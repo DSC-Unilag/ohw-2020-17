@@ -4,13 +4,15 @@
 **Find And Book Gymns/fitness centres In Nigeria,
 search through thousands of gymns and fitness centres in nigeria**
 
+## [link to Host Sited](https://fittech.me)
+
 ### Description
 gyms.ng is a nigerian online gyms/fitness centres booking platform,
-that enables users to search forgyms/fitness centress around nigeria, and basically the one close to them.
-Users can search for gyms/fitness centres by locations, top picked, name, and facilities they offfer.
+that enables users to search for gyms/fitness centres around nigeria, and also those gyms that are  close to them.
+Users can search for gyms/fitness centres by locations, top picked, name, and by the facilities they offfer.
 gyms centres offers various packages like
-- **Workout** -daily subscribtion, so user can only visit thegyms/fitness centres for a day that he paid for, once that they is off, subscribtion expires
-- **Club Membership** - this is on a monthly, quaterly basis, and prices may vary, depending on plan and what they offer
+- **Workout** - This is a daily subscribtion for a day workout,  user can only visit the gyms/fitness centres for just a day that he/she paid for.
+- **Club Membership** - This is on a monthly, quaterly basis, and prices may vary, depending on plan and what they offer
 
 
 ### problem Statement
@@ -28,5 +30,8 @@ This page should have a form that ask for either gym name, auto uses the cuurent
 lead to the listing page.(i.e shows a list of gyms that matches user enteries.
 ### Search/Listing page
 basically a search for gym page, 
+### Details Page
+when a user clicks on a listed gym, the link should take them to this page, where all neccesary info about the listed gym is shown, users review is shown.
+
 
 
