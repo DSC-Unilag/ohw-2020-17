@@ -7,7 +7,7 @@ import Gravater from "../../component/Gravatar/Gravater";
 import { useUserState } from "../../contexts";
 // import Table from "../../component/Table/Table";
 
-export default function Profile() {
+export  function Profile() {
   // const columns = [
   //   { title: "Gyms name", field: "name" },
   //   { title: "date", field: "date" },

@@ -1,12 +1,11 @@
 import React from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
-import Dashboard from "../../pages/dashboard/Dashboard";
-import Users from "../../pages/dashboard/Users";
-import Profile from "../../pages/dashboard/Profile";
+import {Dashboard, Users, Profile} from "../../pages";
 import { DashboardHeader } from "../Header";
 import Sidebar from "../Sidebar/Sidebar";
 import { content_wrapper } from  "../Sidebar/sidebar.module.css";
 import { LayoutProvider } from "../../contexts";
+
 function Layout() {
   return (
     <LayoutProvider>

@@ -1,0 +1,172 @@
+.signup_wrapper {
+  height: 100vh;
+  background-color: #efefef;
+  font-size: 10px;
+}
+.signup {
+  height: 100vh;
+  padding: 1px;
+}
+.signupWrap {
+  margin: 5% auto;
+  box-shadow: 0rem 5rem 10rem rgba(0, 0, 0, 0.3);
+  width: 80%;
+  height: 570px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.signup_image {
+  background-image: url(/images/phone.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex: 1.5;
+}
+.signupForm {
+  flex: 2;
+}
+.signup_nav {
+  position: relative;
+  z-index: 1;
+  padding-left: 1em;
+}
+
+.signup_nav > label {
+  position: relative;
+  display: inline-block;
+  padding: 2rem 2rem 0;
+  text-decoration: none;
+  margin: 0 -0.3em;
+  color: #fff;
+}
+
+.signup_nav > label::before,
+.signup_main {
+  border: 0.1em solid rgba(0, 0, 0, 0.3);
+}
+
+.signup_nav label::before {
+  content: ""; /* To generate the box */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-bottom: none;
+  background-color: #fd0859;
+  border-radius: 0.5em 0.5em 0 0;
+  transform: scale(1.1, 1.3) perspective(0.5em) rotateX(5deg);
+  transform-origin: bottom;
+}
+
+.signup_main {
+  display: block;
+  margin-bottom: 1em;
+  background: #ffff;
+  padding: 1em;
+  border-radius: 0.15em;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.3);
+  height: 90%;
+}
+
+.signup_nav.left > label::before {
+  transform: scale(1.2, 1.3) perspective(0.5em) rotateX(5deg);
+  transform-origin: bottom left;
+}
+.signup_form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.signup_form_control {
+  width: 60%;
+}
+.signup_form_icon:focus-within {
+  color: #6e707e;
+  background-color: #fff;
+  border-color: #bac8f3;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+.signup_form_icon {
+  display: flex;
+}
+.signup_form_icon span {
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid #ecf2ff;
+  border-right: none;
+}
+.signup_form_icon > input:not([type="checkbox"]) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.signup_form input:not([type="checkbox"]) {
+  background-color: transparent;
+  border: 2px solid #ecf2ff;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+.signup_form input:focus {
+  outline: none;
+}
+
+.radio {
+  display: none;
+}
+#userForm,
+#adminForm {
+  display: none;
+}
+#user:checked ~ .signup_main #userForm,
+#admin:checked ~ .signup_main #adminForm {
+  display: flex;
+}
+#user:checked ~ nav #lbluser::before,
+#admin:checked ~ nav #lbladmin::before {
+  margin-bottom: -0.09em;
+  background-color: #fff;
+}
+#user:checked ~ nav #lbluser,
+#admin:checked ~ nav #lbladmin {
+  color: #000000 !important;
+  z-index: 10;
+}
+.btn {
+  width: 40%;
+  padding: 1rem 0;
+  border: none;
+  background-color: #fd0859;
+  color: #fff;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.signup_form_control label {
+  display: inline-block;
+  font-size: 15px;
+  margin-bottom: 0.3rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .signup_image {
+    display: none;
+  }
+}
+@media (max-width: 434px) {
+  .signupWrap {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .signupForm {
+    height: 100%;
+  }
+}

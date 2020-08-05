@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import styles from "./Login.module.css";
-import { withRouter } from "react-router-dom";
+import styles from "./index.module.css";
+import { withRouter,Link } from "react-router-dom";
 import { useUserDispatch, useUserState, loginUser } from "../../contexts/";
 import { Spinner } from "../../component/Spinner";
+
 function Login(props) {
   const [password, setPassword] = useState("Norms@_2018");
   const [username, setUsername] = useState("Norms@gmail.com");
@@ -71,7 +72,7 @@ function Login(props) {
             {isLoading ? <Spinner /> : "LOGIN"}
           </button>
           <small>
-            Don't have an account? <a href="/">Sign up</a>
+            Don't have an account? <Link to="/register">Sign up</Link>
           </small>
         </div>
       </form>

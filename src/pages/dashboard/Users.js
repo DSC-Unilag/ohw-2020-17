@@ -2,7 +2,7 @@ import React from "react";
 import PageTitle from "../../component/PageTitle/PageTitle";
 import Table from "../../component/Table/Table";
 import Card, { CardHead } from "../../component/Card/Card";
-function Users() {
+export function Users() {
   const columns = [
     { title: "name", field: "name" },
     { title: "email", field: "email" },
@@ -27,4 +27,4 @@ function Users() {
   );
 }
 
-export default Users;
+

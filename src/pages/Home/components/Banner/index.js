@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 function Banner() {
-     const location =["lagos","abuja", "shomolu"]
+    //  const location =["lagos","abuja", "shomolu"]
   return (
     <section className="banner">
       <div className="banner_info">

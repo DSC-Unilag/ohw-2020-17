@@ -13,6 +13,10 @@ export function userReducer(state, action) {
       return { ...state, isAuthenticated: false, error: "", isLoading: false };
     case "LOGIN_FAILURE":
       return { ...state, error: action.payload };
+    case "SIGN_UP_REQUEST":
+         return {...state,isLoading:true}
+    case "SIGN_UP_SUCCESS":
+         return {...state,isLoading:false }
     case "Error":
       return { ...state, error: action.payload, isLoading: false };
     default: {

@@ -4,7 +4,7 @@ import Login from "./pages/Login/Login.js";
 import { DashboardLayout } from "./component/Layout";
 import Home from "./pages/Home";
 import { useUserState } from "./contexts/";
-import Gyms from "./pages/Gym";
+import { Gyms,Signup } from "./pages";
 import { NotFound } from "./component/Error";
 function App() {
   const { isAuthenticated } = useUserState();
@@ -20,6 +20,7 @@ function App() {
       <Route path="/listing" component={Gyms} />
       <ProtectedRoute path="/app" component={DashboardLayout} />
       <PublicRoute path="/login" exact component={Login} />
+      <PublicRoute path="/register" component={Signup} />
        <Route  component={NotFound}/> 
   </Switch>
 

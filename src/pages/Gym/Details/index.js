@@ -2,16 +2,17 @@ import React, { useContext } from "react";
 import { GymContext } from "../../../contexts/gymContext";
 import { Redirect } from "react-router-dom";
 import styles from "./index.module.css"
-function Details(props) {
+
+export function Details(props) {
   const { Gyms } = useContext(GymContext);
   const GymId = props.match.params.id;
   const gym = Gyms ? Gyms.find((gym) => gym._id === GymId) : {};
   
-  console.log(Gyms);
   if (!GymId) {
-    return <Redirect to="/" />;
+         return <Redirect to="/" />;
   } else if (gym) {
-    const {name, location, phonenumber,openings,ratings} = gym
+
+    const {name, location,ratings} = gym
     return (
     
       <>
@@ -25,7 +26,7 @@ function Details(props) {
            </div>
             <div className={styles.brief}>
                 <h1 className={styles.name} >{name && name}</h1>
-    <p>{Array.from(ratings)}--- 200 review</p>
+    <p>{[...Array(ratings).keys()].map(star=>(<i className="fa fa-star"></i>))}--- 200 review</p>
                 <p><i className="fa fa-gmap-marker-alt"></i>{location}</p>
             </div>
           </div>
@@ -134,4 +135,4 @@ function Details(props) {
   }
 }
 
-export default Details;
+

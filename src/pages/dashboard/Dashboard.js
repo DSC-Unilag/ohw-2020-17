@@ -4,7 +4,7 @@ import { Grid, GridItem } from "../../component/Grid/Grid";
 import Card, { CardHead } from "../../component/Card/Card";
 import Chart from "./component/Chart";
 import { useUserState } from "../../contexts";
-export default function Dashboard() {
+export function Dashboard() {
   const { error } = useUserState();
   if (error) {
     alert(error);

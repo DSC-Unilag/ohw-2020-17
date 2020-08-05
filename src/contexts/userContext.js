@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { userReducer } from "../reducers";
-import { loginUser, signOut } from "../actions";
+import { loginUser, signOut,register } from "../actions";
 
 var UserStateContext = React.createContext();
 var UserDispatchContext = React.createContext();
@@ -40,6 +40,6 @@ function useUserDispatch() {
   return context;
 }
 
-export { UserProvider, useUserState, useUserDispatch, loginUser, signOut };
+export { UserProvider, useUserState, useUserDispatch, loginUser, signOut,register };
 
 // ###########################################################
